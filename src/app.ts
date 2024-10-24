@@ -3,10 +3,10 @@ import express from "express";
 import morgan from "morgan";
 import helmet from "helmet";
 import cors from "cors";
-import { notFound, errorHandler } from "./middleware/index.middleware";
 import api from "./api/index.api";
 import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
+import { notFoundMiddleware, errorHandlerMiddleware } from "./middleware/index.middleware";
 
 config();
 
@@ -22,7 +22,7 @@ app.use(express.json());
 
 app.use("/api/", api);
 
-app.use(notFound);
-app.use(errorHandler);
+app.use(notFoundMiddleware);
+app.use(errorHandlerMiddleware as any);
 
 export default app;
