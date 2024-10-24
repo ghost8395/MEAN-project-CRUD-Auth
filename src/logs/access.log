@@ -1,0 +1,2 @@
+ GET /api 304 3.559 ms Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Thu, 24 Oct 2024 11:50:42 GMT
+ GET /api/dsf 500 1.493 ms Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Thu, 24 Oct 2024 11:50:49 GMT 
