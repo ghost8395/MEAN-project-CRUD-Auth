@@ -1,8 +1,9 @@
 import app from './src/app';
+import { validateEnv } from './src/config/env.config';
 import { connectToDB } from './src/config/mongoose'; // Import the mongoose configuration file
 
 connectToDB()
-const port = process.env.PORT || 5000;
+const port = validateEnv().port || 5000;
 app.listen(port, () => {
   /* eslint-disable no-console */
   console.log(`Listening: http://localhost:${port}`);
