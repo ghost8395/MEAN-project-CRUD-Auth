@@ -5,12 +5,16 @@ import helmet from "helmet";
 import cors from "cors";
 import { notFound, errorHandler } from "./middleware/index.middleware";
 import api from "./api/index.api";
+import bodyParser from "body-parser";
+import cookieParser from "cookie-parser";
 
 config();
 
 
 const app = express();
 
+app.use(bodyParser.urlencoded({ extended: true, limit: "30mb" }));
+app.use(cookieParser());
 app.use(morgan("dev"));
 app.use(helmet());
 app.use(cors());
