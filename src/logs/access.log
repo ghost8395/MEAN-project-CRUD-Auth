@@ -1,2 +1,16 @@
  GET /api 304 3.559 ms Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Thu, 24 Oct 2024 11:50:42 GMT
  GET /api/dsf 500 1.493 ms Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Thu, 24 Oct 2024 11:50:49 GMT 
+sd POST /auth/register 500 2.220 ms PostmanRuntime/7.42.0 Fri, 25 Oct 2024 12:54:31 GMT 
+ POST /api/auth/register 400 1.537 ms PostmanRuntime/7.42.0 Fri, 25 Oct 2024 12:54:39 GMT 
+ POST /api/auth/register 400 17.213 ms PostmanRuntime/7.42.0 Fri, 25 Oct 2024 12:55:17 GMT 
+ POST /api/auth/register 201 97.328 ms PostmanRuntime/7.42.0 Fri, 25 Oct 2024 12:55:29 GMT
+ POST /api/auth/register 201 5625.130 ms PostmanRuntime/7.42.0 Fri, 25 Oct 2024 12:58:45 GMT
+ POST /api/auth/register 400 4727.815 ms PostmanRuntime/7.42.0 Fri, 25 Oct 2024 13:02:24 GMT 
+ POST /api/auth/register 201 10222.674 ms PostmanRuntime/7.42.0 Fri, 25 Oct 2024 13:02:44 GMT
+ POST /api/auth/login 500 8292.213 ms PostmanRuntime/7.42.0 Fri, 25 Oct 2024 13:02:59 GMT 
+ POST /api/auth/login 200 14631.284 ms PostmanRuntime/7.42.0 Fri, 25 Oct 2024 13:21:01 GMT
+ POST /api/auth/login 403 30334.304 ms PostmanRuntime/7.42.0 Fri, 25 Oct 2024 13:23:43 GMT 
+ POST /api/auth/login 401 4871.787 ms PostmanRuntime/7.42.0 Fri, 25 Oct 2024 13:24:05 GMT 
+ POST /api/auth/login 200 47033.281 ms PostmanRuntime/7.42.0 Fri, 25 Oct 2024 13:24:59 GMT
+ POST /api/auth/login 200 60.061 ms PostmanRuntime/7.42.0 Fri, 25 Oct 2024 13:25:43 GMT
+ POST /api/auth/login 403 12.726 ms PostmanRuntime/7.42.0 Fri, 25 Oct 2024 13:27:47 GMT 

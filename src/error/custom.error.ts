@@ -16,7 +16,9 @@ export enum ErrorCode {
     NOT_FOUND = 1001,
     FORBIDDEN = 1003,
     INTERNAL_SERVER = 1005,
-    BAD_REQUEST= 1007,
+    BAD_REQUEST = 1007,
+    TOKEN_EXPIRE = 1010,
+    TOKEN_NOT_FOUND=1009,
 
 }
 export default CustomAPIError;

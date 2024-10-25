@@ -1,6 +1,7 @@
 import { NextFunction, Request, Response } from 'express';
 import { validateEnv } from '../config/env.config';
 import errorHandlerMiddleware from './errorHandler.middleware';
+import validateSchema from './valdiationSchema';
 
 function notFoundMiddleware(req: Request, res: Response, next: NextFunction) {
   res.status(404);
@@ -8,4 +9,4 @@ function notFoundMiddleware(req: Request, res: Response, next: NextFunction) {
   next(error);
 }
 
-export { errorHandlerMiddleware, notFoundMiddleware };
+export { errorHandlerMiddleware, notFoundMiddleware, validateSchema };
