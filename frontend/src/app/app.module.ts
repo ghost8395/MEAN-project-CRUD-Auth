@@ -13,6 +13,7 @@ import {
   withInterceptorsFromDi,
 } from '@angular/common/http';
 import { ErrorInterceptor, JwtInterceptor } from './helpers';
+import { AlertComponent } from './alert/alert.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { ErrorInterceptor, JwtInterceptor } from './helpers';
     LoginComponent,
     RegisterComponent,
     HomeComponent,
+    AlertComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
   providers: [

@@ -1,5 +1,4 @@
 <div class="container col-md-6 offset-md-3 mt-5">
-    <div *ngIf="error" class="alert alert-danger">{{error}}</div>
     <div class="card">
         <h4 class="card-header">Register</h4>
         <div class="card-body">
@@ -8,7 +7,7 @@
                     <label class="form-label">Email</label>
                     <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
                     <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
-                        <div *ngIf="f.email.errors.required">Email is required</div>
+                        <div *ngIf="f.email.errors.required || f.email.errors.email">Email is required</div>
                     </div>
                 </div>
                 <div class="mb-3">

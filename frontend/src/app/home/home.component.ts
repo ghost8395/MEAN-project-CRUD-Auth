@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
 
-@Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
-})
-export class HomeComponent {
+import { User } from '@app/models';
+import { AccountService } from '@app/service';
 
+@Component({ templateUrl: 'home.component.html' })
+export class HomeComponent {
+    user: User | null;
+
+    constructor(private accountService: AccountService) {
+        this.user = this.accountService.userValue;
+    }
 }
