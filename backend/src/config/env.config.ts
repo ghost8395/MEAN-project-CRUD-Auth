@@ -13,6 +13,7 @@ export const validateEnv = () => {
       jwtconfig: {
         accessSecret: envVars.JWT, 
       },
+      FRONTEND_URI: envVars.FRONTEND_URI,
     };
   } catch (error) {
     let message = undefined;
