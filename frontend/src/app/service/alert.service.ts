@@ -29,6 +29,9 @@ export class AlertService {
     success(message: string, showAfterRedirect = false) {
         this.showAfterRedirect = showAfterRedirect;
         this.subject.next({ type: 'success', message });
+        setTimeout(() => {
+            this.subject.next(null);
+        }, 2000);
     }
 
     error(message: string, showAfterRedirect = false) {

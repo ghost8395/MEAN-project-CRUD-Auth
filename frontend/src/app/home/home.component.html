@@ -1,6 +1,7 @@
-<div class="p-4">
+<div class="p-4" *ngFor="let chart of charts; index as i">
     <div class="container">
-        <h1>Hi {{user?.email}}!</h1>
-        <p>You're logged in with Angular!!</p>
+        <h1>{{chart?.metadata?.title}}</h1>
+        <p>{{chart?.metadata?.description}}</p>
+        <app-draw [input]="chart"></app-draw>
     </div>
 </div>

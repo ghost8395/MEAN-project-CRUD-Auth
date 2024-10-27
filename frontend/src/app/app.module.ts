@@ -14,6 +14,7 @@ import {
 } from '@angular/common/http';
 import { ErrorInterceptor, JwtInterceptor } from './helpers';
 import { AlertComponent } from './alert/alert.component';
+import { DrawComponent } from './home/draw/draw.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { AlertComponent } from './alert/alert.component';
     RegisterComponent,
     HomeComponent,
     AlertComponent,
+    DrawComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
   providers: [

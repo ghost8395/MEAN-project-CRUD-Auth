@@ -6,11 +6,13 @@ import { LoginComponent } from './account/login/login.component';
 import { RegisterComponent } from './account/register/register.component';
 import { AuthGuard } from './helpers';
 
+const productsModule = () => import('./products/products.module').then(x => x.ProductsModule);
+
 const routes: Routes = [
     { path: '', component: HomeComponent, canActivate: [AuthGuard] },
     { path: 'account/login', component: LoginComponent },
     { path: 'account/register', component: RegisterComponent },
-
+    { path: 'products', loadChildren: productsModule, canActivate: [AuthGuard] },
     // otherwise redirect to home
     { path: '**', redirectTo: '' }
 ];

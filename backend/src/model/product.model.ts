@@ -26,6 +26,9 @@ const productSchema = new Schema<IProduct>({
         required: [true, 'Category ID is required'], 
         index: true,
     },
+    size: { 
+        type: String,
+    },
     vendor: { 
         type: Schema.Types.ObjectId, 
         ref: 'Vendor', 

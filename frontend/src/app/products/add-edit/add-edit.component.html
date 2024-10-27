@@ -1,0 +1,79 @@
+<div class="p-4">
+    <div class="container">
+        <h1>{{title}}</h1>
+        <form *ngIf="!loading" [formGroup]="form" (ngSubmit)="onSubmit()">
+            <div class="row">
+                <div class="mb-3 col">
+                    <label class="form-label">Name</label>
+                    <input type="text" formControlName="name" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.name.errors }" />
+                    <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                        <div *ngIf="f.name.errors.required">Name is required</div>
+                    </div>
+                </div>
+                <div class="mb-3 col">
+                    <label class="form-label">Size</label>
+                    <input type="text" formControlName="size" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.size.errors }" />
+                    <div *ngIf="submitted && f.size.errors" class="invalid-feedback">
+                        <div *ngIf="f.size.errors.required">Size is required</div>
+                        <div *ngIf="f.size.errors.required">Size should be minimum 0</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="mb-3 col">
+                    <label class="form-label">Price</label>
+                    <input type="number" formControlName="price" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.price.errors }" />
+                    <div *ngIf="submitted && f.price.errors" class="invalid-feedback">
+                        <div *ngIf="f.price.errors.required">Price is required</div>
+                        <div *ngIf="f.price.errors?.min">Price should be minimum 0</div>
+                    </div>
+                </div>
+                <div class="mb-3 col">
+                    <label class="form-label">Currency</label>
+                    <input type="text" formControlName="currency" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.currency.errors }" />
+                    <div *ngIf="submitted && f.currency.errors" class="invalid-feedback">
+                        <div *ngIf="f.currency.errors.required">Currency is required</div>
+                        <div *ngIf="f.currency.errors.minLength">Currency should be in 3 letters such as USD</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="mb-3 col">
+                    <label class="form-label">Catergory</label>
+                    <select  formControlName="category"  class="form-select" aria-label="Default select example">
+                        <option *ngFor="let categoryItem of categories" [value]="categoryItem?.name">{{categoryItem?.name}}</option>
+                    </select>
+                    <div *ngIf="f.category.errors?.required">Category is required</div>
+                </div>
+                <div class="mb-3 col">
+                    <label class="form-label">Vendor</label>
+                    <select  formControlName="vendor"  class="form-select" aria-label="Default select example">
+                        <option *ngFor="let vendorItem of venodrs" [value]="vendorItem?.name">{{vendorItem?.name}}</option>
+                    </select>
+                    <div *ngIf="f.vendor.errors?.required">Vendor is required</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="mb-3 col">
+                    <label class="form-label">Discount</label>
+                    <input type="number" formControlName="discount" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.discount.errors }" />
+                    <!-- <div *ngIf="submitted && f.discount.errors" class="invalid-feedback"> -->
+                        <div *ngIf="f.discount.errors?.required">Discount is required</div>
+                        <div *ngIf="f.discount.errors?.min">Discount should be minimum 0 {{f.discount.errors?.min}}</div>
+                    <!-- </div> -->
+                </div>
+                <div class="mb-3 col"></div>
+            </div>
+            <div class="mb-3">
+                <button [disabled]="submitting" class="btn btn-primary">
+                    <span *ngIf="submitting" class="spinner-border spinner-border-sm me-1"></span>
+                    Save
+                </button>
+                <a routerLink="/products" class="btn btn-link">Cancel</a>
+            </div>
+        </form>
+        <div *ngIf="loading" class="text-center m-5">
+            <span class="spinner-border spinner-border-lg align-center"></span>
+        </div>
+    </div>
+</div>

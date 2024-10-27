@@ -1,0 +1,40 @@
+<div class="p-4">
+    <div class="container">
+        <h1>Products</h1>
+        <a routerLink="add" class="btn btn-sm btn-success mb-2">Add Product</a>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th style="width: 16.6%">Name</th>
+                    <th style="width: 16.6%">Price</th>
+                    <th style="width: 16.6%">Discount</th>
+                    <th style="width: 16.6%">Category</th>
+                    <th style="width: 16.6%">Size</th>
+                    <th style="width: 16.6%">Vendor</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let product of products">
+                    <td>{{product.name}}</td>
+                    <td>{{product.price}} {{product.currency}}</td>
+                    <td>{{product.discount}} %</td>
+                    <td>{{getCategory(product.category)}}</td>
+                    <td>{{product.size}}</td>
+                    <td>{{getVendor(product.vendor)}}</td>
+                    <td style="white-space: nowrap">
+                        <a routerLink="edit/{{product._id}}" class="btn btn-sm btn-primary me-1">Edit</a>
+                        <button (click)="deleteProduct(product._id)" class="btn btn-sm btn-danger" style="width: 58px" [disabled]="product.isDeleting">
+                            <span *ngIf="product.isDeleting" class="spinner-border spinner-border-sm"></span>
+                            <span *ngIf="!product.isDeleting">Delete</span>
+                        </button>
+                    </td>
+                </tr>
+                <tr *ngIf="!products">
+                    <td colspan="4" class="text-center">
+                        <span class="spinner-border spinner-border-lg align-center"></span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
