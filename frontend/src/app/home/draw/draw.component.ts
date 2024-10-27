@@ -12,11 +12,9 @@ export class DrawComponent implements OnInit {
   
   @ViewChild('chart')
   public get chartElementRef(): ElementRef<HTMLCanvasElement> {
-    console.log('==> get chartElementRef')
     return this._chartElementRef as any;
   }
   public set chartElementRef(value: ElementRef<HTMLCanvasElement>) {
-    console.log('==> set chartElementRef')
     this._chartElementRef = value;
   }
 
@@ -29,7 +27,6 @@ export class DrawComponent implements OnInit {
   }
 
    ngAfterViewInit() {
-    console.log('input',this.input)
     this.draw(this.input);
   }
   private draw (input: any) { 
