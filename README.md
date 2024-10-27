@@ -64,4 +64,4 @@ With each run, categories and vendors data are seeded.
 ## Demo
 
 A video has been added for demo purposes.
-/******  fd99af5a-4595-437f-afe7-c4673faedec3  *******/
+[![YouTube](http://i.ytimg.com/vi/sB4K4ZpUbfo/hqdefault.jpg)](https://www.youtube.com/watch?v=sB4K4ZpUbfo)
