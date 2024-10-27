@@ -62,6 +62,6 @@ With each run, categories and vendors data are seeded.
 - Pagination
 
 ## Demo
-
-A video has been added for demo purposes.
 [![YouTube](http://i.ytimg.com/vi/sB4K4ZpUbfo/hqdefault.jpg)](https://www.youtube.com/watch?v=sB4K4ZpUbfo)
+</br>
+A video has been added for demo purposes.
